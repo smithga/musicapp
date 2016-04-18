@@ -1,0 +1,3 @@
+<div *ngFor='#artist of artists | artistFilter:filter'>
+    <artist-info [artist]='artist' (artistClicked)='onArtistClicked($event)'></artist-info>
+</div>

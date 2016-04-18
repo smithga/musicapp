@@ -1,41 +1,25 @@
-import { Component, OnInit } from 'angular2/core';
+import { Component, OnInit, Input } from 'angular2/core';
 import { Router } from 'angular2/router';
 
 import { IAlbum } from '../models/album';
-import { AlbumsService } from '../services/albums.service';
-import { AlbumInfoComponent } from '../info/album.info.component';
-import { AlbumFilterPipe } from '../pipes/album.filter.pipe';
+import { AlbumsListComponent } from '../list/albums.list.component';
 
 @Component({
     templateUrl: 'app/albums/index/albums.component.html',
-    directives: [AlbumInfoComponent],
-    pipes: [AlbumFilterPipe]
+    directives: [AlbumsListComponent]
 })
-export class AlbumsComponent implements OnInit {
+export class AlbumsComponent {
     public pageTitle: string = "Albums";
-    public errorMessage: string;
     public albumSearchFilter: string = "";
-    public albums: IAlbum[];
-    
-    constructor(private _router: Router, private _albumsService: AlbumsService) {}
-    
-    ngOnInit() : void {
-        this.getAlbums();
-    }
-    
-    getAlbums() {
-        this._albumsService.getAlbums()
-            .subscribe(
-            albums => this.albums = albums,
-            error =>  this.errorMessage = <any>error); 
-    }
-    
+        
+    constructor(private _router: Router) {}
+            
     public onBack(): void {
         this._router.navigate(['Home']);
     }
     
     public onAlbumClicked(album: IAlbum): void {
-        //alert(album.title);
+        console.dir(album);
         this._router.navigate(["AlbumDetails", {id:album.album_id}]);
     }
 }

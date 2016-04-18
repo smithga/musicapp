@@ -18,7 +18,9 @@
                 {{artist.biography}}
             </div>
         </div>
-        <album-list [artist]='artist'></album-list>
+        <div class='well'>
+            <albums-list (albumClicked)='onAlbumClicked($event)' [artist]='artist'></albums-list>
+        </div>
     </div>
     
     <div class="panel-footer">

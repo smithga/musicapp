@@ -60,6 +60,9 @@ System.register(['angular2/core', 'angular2/router', '../services/artists.servic
                 ArtistDetailsComponent.prototype.onBack = function () {
                     this._router.navigate(["Artists"]);
                 };
+                ArtistDetailsComponent.prototype.onAlbumClicked = function (album) {
+                    this._router.navigate(["AlbumDetails", { id: album.album_id }]);
+                };
                 ArtistDetailsComponent = __decorate([
                     core_1.Component({
                         templateUrl: 'app/artists/details/artist.details.component.html',

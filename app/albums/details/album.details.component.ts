@@ -1,10 +1,10 @@
 import { Component, OnInit } from 'angular2/core';
-import { Router, RouteParams } from 'angular2/router';
+import { Router, RouteParams, Location } from 'angular2/router';
 
 import { AlbumsService } from '../services/albums.service';
-import { ArtistsService } from '../../artists/artists.service';
+import { ArtistsService } from '../../artists/services/artists.service';
 import { IAlbum } from '../models/album';
-import { IArtist } from '../../artists/artist';
+import { IArtist } from '../../artists/models/artist';
 
 @Component({
     templateUrl: 'app/albums/details/album.details.component.html'
@@ -14,7 +14,11 @@ export class AlbumDetailsComponent implements OnInit {
     album: IAlbum;
     artist: IArtist;
     
-    constructor(private _albumsService: AlbumsService, private _artistsService: ArtistsService, private _router: Router, private _routeParams: RouteParams) {}
+    constructor(private _albumsService: AlbumsService, 
+                private _artistsService: ArtistsService, 
+                private _router: Router, 
+                private _routeParams: RouteParams,
+                private _location: Location) {}
     
     ngOnInit() :void {
         if (!this.album) {
@@ -41,7 +45,7 @@ export class AlbumDetailsComponent implements OnInit {
     }
     
     onBack(): void {
-        this._router.navigate(["Albums"]);  
+        this._location.back();  
     }
     
 }

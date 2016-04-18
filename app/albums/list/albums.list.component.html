@@ -1,1 +1,3 @@
-album list
+<div *ngFor='#album of albums | albumFilter:filter'>
+    <album-info [album]='album' (albumClicked)='onAlbumClicked($event)'></album-info>
+</div>

@@ -25,7 +25,6 @@ export class ArtistDetailsComponent implements OnInit {
             let id = +this._routeParams.get('id');
             this.getArtist(id);
         }
-    
     }
     
     getArtist(id: number): void {
@@ -45,6 +44,10 @@ export class ArtistDetailsComponent implements OnInit {
 
     onBack(): void {
         this._router.navigate(["Artists"]);  
+    }
+    
+    public onAlbumClicked(album: IAlbum): void {
+        this._router.navigate(["AlbumDetails", {id:album.album_id}]);
     }
 
 }

@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', '../services/albums.service', '../../artists/artists.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', '../services/albums.service', '../../artists/services/artists.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -28,11 +28,12 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
             }],
         execute: function() {
             AlbumDetailsComponent = (function () {
-                function AlbumDetailsComponent(_albumsService, _artistsService, _router, _routeParams) {
+                function AlbumDetailsComponent(_albumsService, _artistsService, _router, _routeParams, _location) {
                     this._albumsService = _albumsService;
                     this._artistsService = _artistsService;
                     this._router = _router;
                     this._routeParams = _routeParams;
+                    this._location = _location;
                 }
                 AlbumDetailsComponent.prototype.ngOnInit = function () {
                     if (!this.album) {
@@ -54,16 +55,15 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
                     this._artistsService.getArtist(id).subscribe(function (artist) { return _this.artist = artist; }, function (error) { return _this.errorMessage = error; });
                 };
                 AlbumDetailsComponent.prototype.onBack = function () {
-                    this._router.navigate(["Albums"]);
+                    this._location.back();
                 };
                 AlbumDetailsComponent = __decorate([
                     core_1.Component({
                         templateUrl: 'app/albums/details/album.details.component.html'
                     }), 
-                    __metadata('design:paramtypes', [albums_service_1.AlbumsService, (typeof (_a = typeof artists_service_1.ArtistsService !== 'undefined' && artists_service_1.ArtistsService) === 'function' && _a) || Object, router_1.Router, router_1.RouteParams])
+                    __metadata('design:paramtypes', [albums_service_1.AlbumsService, artists_service_1.ArtistsService, router_1.Router, router_1.RouteParams, router_1.Location])
                 ], AlbumDetailsComponent);
                 return AlbumDetailsComponent;
-                var _a;
             }());
             exports_1("AlbumDetailsComponent", AlbumDetailsComponent);
         }

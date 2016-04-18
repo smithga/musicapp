@@ -7,10 +7,8 @@
         {{pageTitle}}
     </div>
 
-    <div class="panel-body" *ngIf='albums'>
-        <div *ngFor='#album of albums | albumFilter:albumSearchFilter'>
-            <album-info [album]='album' (albumClicked)='onAlbumClicked($event)'></album-info>
-        </div>
+    <div class="panel-body">
+        <albums-list [filter]='albumSearchFilter' (albumClicked)='onAlbumClicked($event)'></albums-list>
     </div>
 
     <div class="panel-footer">
