@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', 'rxjs/Rx', 'angular2/http', './home/home.component', './albums/albums.component', './artists/artists.component', './albums/albums.service', './artists/artists.service', './albums/album.details.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', 'rxjs/Rx', 'angular2/http', './home/home.component', './albums/albums.component', './artists/artists.component', './albums/albums.service', './artists/artists.service', './albums/album.details.component', './artists/artist.details.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx', 'angular2/http',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, http_1, home_component_1, albums_component_1, artists_component_1, albums_service_1, artists_service_1, album_details_component_1;
+    var core_1, router_1, http_1, home_component_1, albums_component_1, artists_component_1, albums_service_1, artists_service_1, album_details_component_1, artist_details_component_1;
     var AppComponent;
     return {
         setters:[
@@ -41,6 +41,9 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx', 'angular2/http',
             },
             function (album_details_component_1_1) {
                 album_details_component_1 = album_details_component_1_1;
+            },
+            function (artist_details_component_1_1) {
+                artist_details_component_1 = artist_details_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -63,7 +66,8 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx', 'angular2/http',
                         { path: "/home", name: "Home", component: home_component_1.HomeComponent, useAsDefault: true },
                         { path: "/albums", name: "Albums", component: albums_component_1.AlbumsComponent },
                         { path: "/artists", name: "Artists", component: artists_component_1.ArtistsComponent },
-                        { path: "/albums/:id", name: "AlbumDetails", component: album_details_component_1.AlbumDetailsComponent }
+                        { path: "/albums/:id", name: "AlbumDetails", component: album_details_component_1.AlbumDetailsComponent },
+                        { path: "/arists/:id", name: "ArtistDetails", component: artist_details_component_1.ArtistDetailsComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

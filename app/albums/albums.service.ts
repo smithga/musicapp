@@ -22,6 +22,11 @@ export class AlbumsService {
             .map((albums: IAlbum[]) => albums.find(p => p.album_id === id));       
     }
 
+    getAlbumsForArtist(id: number): Observable<IAlbum[]> {
+        return this.getAlbums()
+            .map((albums: IAlbum[]) => albums.filter(p => p.artist_id === id));       
+    }
+
     private handleError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console

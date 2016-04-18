@@ -60,10 +60,9 @@ System.register(['angular2/core', 'angular2/router', './albums.service', '../art
                     core_1.Component({
                         templateUrl: 'app/albums/album.details.component.html'
                     }), 
-                    __metadata('design:paramtypes', [albums_service_1.AlbumsService, artists_service_1.ArtistsService, (typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof router_1.RouteParams !== 'undefined' && router_1.RouteParams) === 'function' && _b) || Object])
+                    __metadata('design:paramtypes', [albums_service_1.AlbumsService, artists_service_1.ArtistsService, router_1.Router, router_1.RouteParams])
                 ], AlbumDetailsComponent);
                 return AlbumDetailsComponent;
-                var _a, _b;
             }());
             exports_1("AlbumDetailsComponent", AlbumDetailsComponent);
         }

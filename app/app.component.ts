@@ -9,6 +9,7 @@ import { ArtistsComponent } from './artists/artists.component';
 import { AlbumsService } from './albums/albums.service';
 import { ArtistsService } from './artists/artists.service';
 import { AlbumDetailsComponent } from './albums/album.details.component';
+import { ArtistDetailsComponent } from './artists/artist.details.component';
 
 @Component({
     selector: 'my-app',
@@ -23,7 +24,8 @@ import { AlbumDetailsComponent } from './albums/album.details.component';
     {path: "/home", name: "Home", component: HomeComponent, useAsDefault: true },
     { path: "/albums", name: "Albums", component: AlbumsComponent },
     { path: "/artists", name: "Artists", component: ArtistsComponent },
-    { path: "/albums/:id", name: "AlbumDetails", component: AlbumDetailsComponent }
+    { path: "/albums/:id", name: "AlbumDetails", component: AlbumDetailsComponent },
+    { path: "/arists/:id", name: "ArtistDetails", component: ArtistDetailsComponent }
 ])
 export class AppComponent {
     pageTitle(): string {

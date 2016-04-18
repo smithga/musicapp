@@ -1,0 +1,22 @@
+<div class="panel panel-default" *ngIf='artist'>
+    
+    <div class="panel-heading">
+        Artist Details
+    </div>
+    
+    <div class="panel-body">
+        <img [src]='"images/artists/" + artist.image_url' />
+        {{artist.name}}
+        <br/>
+        {{artist.biography}}
+        <br/>
+        <album-list [artist]='artist'></album-list>
+    </div>
+    
+    <div class="panel-footer">
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
+    
+</div>

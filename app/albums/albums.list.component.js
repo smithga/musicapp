@@ -11,40 +11,29 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AlbumInfoComponent;
+    var AlbumsListComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AlbumInfoComponent = (function () {
-                function AlbumInfoComponent() {
-                    this.albumClicked = new core_1.EventEmitter();
+            AlbumsListComponent = (function () {
+                function AlbumsListComponent() {
                 }
-                AlbumInfoComponent.prototype.onClick = function () {
-                    this.albumClicked.emit(this.album);
+                AlbumsListComponent.prototype.ngOnInit = function () {
                 };
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', Object)
-                ], AlbumInfoComponent.prototype, "album", void 0);
-                __decorate([
-                    core_1.Output(), 
-                    __metadata('design:type', core_1.EventEmitter)
-                ], AlbumInfoComponent.prototype, "albumClicked", void 0);
-                AlbumInfoComponent = __decorate([
+                AlbumsListComponent = __decorate([
                     core_1.Component({
-                        selector: 'album-info',
-                        templateUrl: 'app/albums/album.info.component.html',
-                        styleUrls: ['app/albums/album.info.component.css'],
+                        selector: 'album-list',
+                        templateUrl: 'app/albums/albums.list.component.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AlbumInfoComponent);
-                return AlbumInfoComponent;
+                ], AlbumsListComponent);
+                return AlbumsListComponent;
             }());
-            exports_1("AlbumInfoComponent", AlbumInfoComponent);
+            exports_1("AlbumsListComponent", AlbumsListComponent);
         }
     }
 });
-//# sourceMappingURL=album.info.component.js.map
+//# sourceMappingURL=albums.list.component.js.map

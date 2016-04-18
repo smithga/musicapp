@@ -58,10 +58,9 @@ System.register(['angular2/core', 'angular2/router', './albums.service', './albu
                         directives: [album_info_component_1.AlbumInfoComponent],
                         pipes: [album_filter_pipe_1.AlbumFilterPipe]
                     }), 
-                    __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, albums_service_1.AlbumsService])
+                    __metadata('design:paramtypes', [router_1.Router, albums_service_1.AlbumsService])
                 ], AlbumsComponent);
                 return AlbumsComponent;
-                var _a;
             }());
             exports_1("AlbumsComponent", AlbumsComponent);
         }

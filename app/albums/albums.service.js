@@ -39,6 +39,10 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
                     return this.getAlbums()
                         .map(function (albums) { return albums.find(function (p) { return p.album_id === id; }); });
                 };
+                AlbumsService.prototype.getAlbumsForArtist = function (id) {
+                    return this.getAlbums()
+                        .map(function (albums) { return albums.filter(function (p) { return p.artist_id === id; }); });
+                };
                 AlbumsService.prototype.handleError = function (error) {
                     // in a real world app, we may send the server to some remote logging infrastructure
                     // instead of just logging it to the console
@@ -47,10 +51,9 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
                 };
                 AlbumsService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [(typeof (_a = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _a) || Object])
+                    __metadata('design:paramtypes', [http_1.Http])
                 ], AlbumsService);
                 return AlbumsService;
-                var _a;
             }());
             exports_1("AlbumsService", AlbumsService);
         }

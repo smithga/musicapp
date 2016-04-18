@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', './artists.service', './artist.info.component', '../albums/albums.list.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1;
+    var core_1, router_1, artists_service_1, artist_info_component_1, albums_list_component_1;
     var ArtistsComponent;
     return {
         setters:[
@@ -19,24 +19,46 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (artists_service_1_1) {
+                artists_service_1 = artists_service_1_1;
+            },
+            function (artist_info_component_1_1) {
+                artist_info_component_1 = artist_info_component_1_1;
+            },
+            function (albums_list_component_1_1) {
+                albums_list_component_1 = albums_list_component_1_1;
             }],
         execute: function() {
             ArtistsComponent = (function () {
-                function ArtistsComponent(_router) {
+                function ArtistsComponent(_router, _artistsService) {
                     this._router = _router;
+                    this._artistsService = _artistsService;
                     this.pageTitle = "Artists";
                 }
+                ArtistsComponent.prototype.ngOnInit = function () {
+                    this.getArtists();
+                };
+                ArtistsComponent.prototype.getArtists = function () {
+                    var _this = this;
+                    this._artistsService.getArtists()
+                        .subscribe(function (artists) { return _this.artists = artists; }, function (error) { return _this.errorMessage = error; });
+                };
                 ArtistsComponent.prototype.onBack = function () {
                     this._router.navigate(["Home"]);
                 };
+                ArtistsComponent.prototype.onArtistClicked = function (artist) {
+                    this._router.navigate(["ArtistDetails", { id: artist.artist_id }]);
+                };
                 ArtistsComponent = __decorate([
                     core_1.Component({
-                        templateUrl: 'app/artists/artists.component.html'
+                        templateUrl: 'app/artists/artists.component.html',
+                        directives: [artist_info_component_1.ArtistInfoComponent,
+                            albums_list_component_1.AlbumsListComponent],
                     }), 
-                    __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+                    __metadata('design:paramtypes', [router_1.Router, artists_service_1.ArtistsService])
                 ], ArtistsComponent);
                 return ArtistsComponent;
-                var _a;
             }());
             exports_1("ArtistsComponent", ArtistsComponent);
         }

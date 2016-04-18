@@ -3,8 +3,10 @@
         {{pageTitle}}
     </div>
 
-    <div class="panel-body">
-                
+    <div class="panel-body" *ngIf='artists'>
+        <div *ngFor='#artist of artists'>
+            <artist-info [artist]='artist' (artistClicked)='onArtistClicked($event)'></artist-info>
+        </div>
     </div>
 
     <div class="panel-footer">
