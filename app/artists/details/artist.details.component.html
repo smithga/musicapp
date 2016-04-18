@@ -5,21 +5,23 @@
     </div>
     
     <div class="panel-body">
-        <div class='row'>
-            <div class='col-md-2'>
+        <div class="media">
+            <div class="media-left media-top">
                 <img [src]='"images/artists/" + artist.image_url' />
             </div>
-            <div class='col-md-10'>
-                <h3>{{artist.name}}</h3>
-            </div>
-        </div>
-        <div class='row'>
-            <div class='col-md-12'>
+            <div class="media-body">
+                <h4 class="media-heading">{{artist.name}}</h4>
                 {{artist.biography}}
             </div>
         </div>
-        <div class='well'>
-            <albums-list (albumClicked)='onAlbumClicked($event)' [artist]='artist'></albums-list>
+        <br/>
+        <div class='panel panel-default'>
+            <div class='panel-heading'>
+                Albums
+            </div>
+            <div class='panel-body'>
+                <albums-list (albumClicked)='onAlbumClicked($event)' [artist]='artist'></albums-list>
+            </div>
         </div>
     </div>
     
