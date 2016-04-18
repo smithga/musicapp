@@ -1,0 +1,121 @@
+[
+    {
+        "album_id": 1,
+        "artist_id": 1,
+        "image_url": "muse-drones.jpg",
+        "title": "Drones",
+        "year": "2015"
+    },
+    {
+        "album_id": 2,
+        "artist_id": 1,
+        "image_url": "muse-2nd_law.jpg",
+        "title": "2nd Law",
+        "year": "2015"
+    },
+    {
+        "album_id": 3,
+        "artist_id": 1,
+        "image_url": "muse-black_holes_and_revelations.jpg",
+        "title": "Black Holes and Revelations",
+        "year": "2015"
+    },
+    {
+        "album_id": 4,
+        "artist_id": 2,
+        "image_url": "breaking_benjamin-phobia.jpg",
+        "title": "Phobia",
+        "year": "2015"
+    },
+    {
+        "album_id": 5,
+        "artist_id": 2,
+        "image_url": "breaking_benjamin-saturate.jpg",
+        "title": "Saturate",
+        "year": "2015"
+    },
+    {
+        "album_id": 6,
+        "artist_id": 2,
+        "image_url": "breaking_benjamin-we_are_not_alone.jpg",
+        "title": "We Are Not Alone",
+        "year": "2015"
+    },
+    {
+        "album_id": 7,
+        "artist_id": 3,
+        "image_url": "pearl_jam-ten.jpg",
+        "title": "Ten",
+        "year": "2015"
+    },
+    {
+        "album_id": 8,
+        "artist_id": 3,
+        "image_url": "pearl_jam-vs.jpg",
+        "title": "Vs",
+        "year": "2015"
+    },
+    {
+        "album_id": 9,
+        "artist_id": 4,
+        "image_url": "pink_floyd-animals.jpg",
+        "title": "Animals",
+        "year": "2015"
+    },
+        {
+        "album_id": 10,
+        "artist_id": 4,
+        "image_url": "pink_floyd-the_dark_side_of_the_moon.jpg",
+        "title": "The Dark Side of the Moon",
+        "year": "2015"
+    },
+        {
+        "album_id": 11,
+        "artist_id": 4,
+        "image_url": "pink_floyd-the_wall.jpg",
+        "title": "The Wall",
+        "year": "2015"
+    },
+    {
+        "album_id": 12,
+        "artist_id": 4,
+        "image_url": "pink_floyd-wish_you_were_here.jpg",
+        "title": "Wish You Were Here",
+        "year": "2015"
+    },
+    {
+        "album_id": 13,
+        "artist_id": 6,
+        "image_url": "rhcp-by_the_way.jpg",
+        "title": "By the Way",
+        "year": "2015"
+    },
+    {
+        "album_id": 14,
+        "artist_id": 4,
+        "image_url": "rhcp-californication.jpg",
+        "title": "Californication",
+        "year": "2015"
+    },
+    {
+        "album_id": 15,
+        "artist_id": 5,
+        "image_url": "soundgarden-badmotorfinger.jpg",
+        "title": "Badmotorfinger",
+        "year": "2015"
+    },
+    {
+        "album_id": 16,
+        "artist_id": 5,
+        "image_url": "soundgarden-king_animal.jpg",
+        "title": "King Animal",
+        "year": "2015"
+    },
+    {
+        "album_id": 17,
+        "artist_id": 5,
+        "image_url": "soundgarden-superunknown.jpg",
+        "title": "Superunknown",
+        "year": "2015"
+    }
+]

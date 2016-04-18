@@ -1,0 +1,21 @@
+<div class="well">
+    Search: 
+    <input type="text" [(ngModel)]="albumSearchFilter"/>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+
+    <div class="panel-body" *ngIf='albums'>
+        <div *ngFor='#album of albums | albumFilter:albumSearchFilter'>
+            <album-info [album]='album' (albumClicked)='onAlbumClicked($event)'></album-info>
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
+</div>
