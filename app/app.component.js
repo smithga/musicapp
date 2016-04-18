@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', 'rxjs/Rx', 'angular2/http', './home/home.component', './albums/albums.component', './artists/artists.component', './albums/albums.service', './artists/artists.service', './albums/album.details.component', './artists/artist.details.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', 'rxjs/Rx', 'angular2/http', './home/home.component', './albums/index/albums.component', './artists/index/artists.component', './albums/services/albums.service', './artists/services/artists.service', './albums/details/album.details.component', './artists/details/artist.details.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

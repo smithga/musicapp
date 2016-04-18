@@ -1,0 +1,10 @@
+div {
+    cursor: pointer;
+}
+.album {
+    width: 200px;
+    height: 200px;
+}
+.album-info {
+    padding: 3px;
+}

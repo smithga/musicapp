@@ -1,5 +1,5 @@
 import {  PipeTransform, Pipe } from 'angular2/core';
-import { IAlbum } from './album';
+import { IAlbum } from '../models/album';
 
 @Pipe({
     name: 'albumFilter'

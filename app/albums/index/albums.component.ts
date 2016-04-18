@@ -1,13 +1,13 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-import { IAlbum } from './album';
-import { AlbumsService } from './albums.service';
-import { AlbumInfoComponent } from './album.info.component';
-import { AlbumFilterPipe } from './album.filter.pipe';
+import { IAlbum } from '../models/album';
+import { AlbumsService } from '../services/albums.service';
+import { AlbumInfoComponent } from '../info/album.info.component';
+import { AlbumFilterPipe } from '../pipes/album.filter.pipe';
 
 @Component({
-    templateUrl: 'app/albums/albums.component.html',
+    templateUrl: 'app/albums/index/albums.component.html',
     directives: [AlbumInfoComponent],
     pipes: [AlbumFilterPipe]
 })

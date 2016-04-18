@@ -1,13 +1,13 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router, RouteParams } from 'angular2/router';
 
-import { AlbumsService } from './albums.service';
-import { ArtistsService } from '../artists/artists.service';
-import { IAlbum } from './album';
-import { IArtist } from '../artists/artist';
+import { AlbumsService } from '../services/albums.service';
+import { ArtistsService } from '../../artists/artists.service';
+import { IAlbum } from '../models/album';
+import { IArtist } from '../../artists/artist';
 
 @Component({
-    templateUrl: 'app/albums/album.details.component.html'
+    templateUrl: 'app/albums/details/album.details.component.html'
 })
 export class AlbumDetailsComponent implements OnInit {
     errorMessage: string;

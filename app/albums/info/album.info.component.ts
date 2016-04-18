@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from 'angular2/core';
 
-import { IAlbum } from './album';
+import { IAlbum } from '../models/album';
 
 @Component({
     selector: 'album-info',
-    templateUrl: 'app/albums/album.info.component.html',
-    styleUrls: ['app/albums/album.info.component.css'],
+    templateUrl: 'app/albums/info/album.info.component.html',
+    styleUrls: ['app/albums/info/album.info.component.css'],
 })
 export class AlbumInfoComponent {
     @Input() album: IAlbum;

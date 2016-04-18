@@ -1,14 +1,14 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-import { IArtist } from './artist';
-import { ArtistsService } from './artists.service';
-import { ArtistInfoComponent } from './artist.info.component';
-import { AlbumsListComponent } from '../albums/albums.list.component';
-import { IAlbum } from '../albums/album';
+import { IArtist } from '../models/artist';
+import { ArtistsService } from '../services/artists.service';
+import { ArtistInfoComponent } from '../info/artist.info.component';
+import { AlbumsListComponent } from '../../albums/list/albums.list.component';
+import { IAlbum } from '../../albums/models/album';
 
 @Component({
-    templateUrl: 'app/artists/artists.component.html',
+    templateUrl: 'app/artists/index/artists.component.html',
     directives: [ArtistInfoComponent,
                  AlbumsListComponent],
 })

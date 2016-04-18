@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../artists/artist'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,12 @@ System.register(['angular2/core', '../artists/artist'], function(exports_1, cont
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, artist_1;
+    var core_1;
     var ArtistInfoComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (artist_1_1) {
-                artist_1 = artist_1_1;
             }],
         execute: function() {
             ArtistInfoComponent = (function () {
@@ -30,7 +27,7 @@ System.register(['angular2/core', '../artists/artist'], function(exports_1, cont
                 };
                 __decorate([
                     core_1.Input(), 
-                    __metadata('design:type', (typeof (_a = typeof artist_1.IArtist !== 'undefined' && artist_1.IArtist) === 'function' && _a) || Object)
+                    __metadata('design:type', Object)
                 ], ArtistInfoComponent.prototype, "artist", void 0);
                 __decorate([
                     core_1.Output(), 
@@ -39,13 +36,12 @@ System.register(['angular2/core', '../artists/artist'], function(exports_1, cont
                 ArtistInfoComponent = __decorate([
                     core_1.Component({
                         selector: 'artist-info',
-                        templateUrl: 'app/artists/artist.info.component.html',
-                        styleUrls: ['app/artists/artist.info.component.css']
+                        templateUrl: 'app/artists/info/artist.info.component.html',
+                        styleUrls: ['app/artists/info/artist.info.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
                 ], ArtistInfoComponent);
                 return ArtistInfoComponent;
-                var _a;
             }());
             exports_1("ArtistInfoComponent", ArtistInfoComponent);
         }

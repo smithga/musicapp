@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../artists/artist'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,45 +10,41 @@ System.register(['angular2/core', '../artists/artist'], function(exports_1, cont
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, artist_1;
-    var ArtistInfoComponent;
+    var core_1;
+    var AlbumInfoComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (artist_1_1) {
-                artist_1 = artist_1_1;
             }],
         execute: function() {
-            ArtistInfoComponent = (function () {
-                function ArtistInfoComponent() {
-                    this.artistClicked = new core_1.EventEmitter();
+            AlbumInfoComponent = (function () {
+                function AlbumInfoComponent() {
+                    this.albumClicked = new core_1.EventEmitter();
                 }
-                ArtistInfoComponent.prototype.onClick = function () {
-                    this.artistClicked.emit(this.artist);
+                AlbumInfoComponent.prototype.onClick = function () {
+                    this.albumClicked.emit(this.album);
                 };
                 __decorate([
                     core_1.Input(), 
-                    __metadata('design:type', (typeof (_a = typeof artist_1.IArtist !== 'undefined' && artist_1.IArtist) === 'function' && _a) || Object)
-                ], ArtistInfoComponent.prototype, "artist", void 0);
+                    __metadata('design:type', Object)
+                ], AlbumInfoComponent.prototype, "album", void 0);
                 __decorate([
                     core_1.Output(), 
                     __metadata('design:type', core_1.EventEmitter)
-                ], ArtistInfoComponent.prototype, "artistClicked", void 0);
-                ArtistInfoComponent = __decorate([
+                ], AlbumInfoComponent.prototype, "albumClicked", void 0);
+                AlbumInfoComponent = __decorate([
                     core_1.Component({
-                        selector: 'artist-info',
-                        templateUrl: 'app/artists/artist.info.component.html',
-                        styleUrls: ['app/artists/artist.info.component.css']
+                        selector: 'album-info',
+                        templateUrl: 'app/albums/info/album.info.component.html',
+                        styleUrls: ['app/albums/info/album.info.component.css'],
                     }), 
                     __metadata('design:paramtypes', [])
-                ], ArtistInfoComponent);
-                return ArtistInfoComponent;
-                var _a;
+                ], AlbumInfoComponent);
+                return AlbumInfoComponent;
             }());
-            exports_1("ArtistInfoComponent", ArtistInfoComponent);
+            exports_1("AlbumInfoComponent", AlbumInfoComponent);
         }
     }
 });
-//# sourceMappingURL=artist.info.component.js.map
+//# sourceMappingURL=album.info.component.js.map

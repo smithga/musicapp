@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './artists.service', './artist.info.component', '../albums/albums.service', '../albums/albums.list.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', '../services/artists.service', '../info/artist.info.component', '../../albums/services/albums.service', '../../albums/list/albums.list.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -62,14 +62,13 @@ System.register(['angular2/core', 'angular2/router', './artists.service', './art
                 };
                 ArtistDetailsComponent = __decorate([
                     core_1.Component({
-                        templateUrl: 'app/artists/artist.details.component.html',
+                        templateUrl: 'app/artists/details/artist.details.component.html',
                         directives: [artist_info_component_1.ArtistInfoComponent,
                             albums_list_component_1.AlbumsListComponent]
                     }), 
-                    __metadata('design:paramtypes', [artists_service_1.ArtistsService, (typeof (_a = typeof albums_service_1.AlbumsService !== 'undefined' && albums_service_1.AlbumsService) === 'function' && _a) || Object, router_1.Router, router_1.RouteParams])
+                    __metadata('design:paramtypes', [artists_service_1.ArtistsService, albums_service_1.AlbumsService, router_1.Router, router_1.RouteParams])
                 ], ArtistDetailsComponent);
                 return ArtistDetailsComponent;
-                var _a;
             }());
             exports_1("ArtistDetailsComponent", ArtistDetailsComponent);
         }

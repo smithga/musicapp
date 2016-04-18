@@ -5,11 +5,19 @@
     </div>
     
     <div class="panel-body">
-        <img [src]='"images/artists/" + artist.image_url' />
-        {{artist.name}}
-        <br/>
-        {{artist.biography}}
-        <br/>
+        <div class='row'>
+            <div class='col-md-2'>
+                <img [src]='"images/artists/" + artist.image_url' />
+            </div>
+            <div class='col-md-10'>
+                <h3>{{artist.name}}</h3>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-12'>
+                {{artist.biography}}
+            </div>
+        </div>
         <album-list [artist]='artist'></album-list>
     </div>
     

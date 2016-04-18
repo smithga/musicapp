@@ -1,15 +1,15 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router, RouteParams } from 'angular2/router';
 
-import { IArtist } from './artist';
-import { IAlbum } from '../albums/album';
-import { ArtistsService } from './artists.service';
-import { ArtistInfoComponent } from './artist.info.component';
-import { AlbumsService } from '../albums/albums.service';
-import { AlbumsListComponent } from '../albums/albums.list.component';
+import { IArtist } from '../models/artist';
+import { IAlbum } from '../../albums/models/album';
+import { ArtistsService } from '../services/artists.service';
+import { ArtistInfoComponent } from '../info/artist.info.component';
+import { AlbumsService } from '../../albums/services/albums.service';
+import { AlbumsListComponent } from '../../albums/list/albums.list.component';
 
 @Component({
-    templateUrl: 'app/artists/artist.details.component.html',
+    templateUrl: 'app/artists/details/artist.details.component.html',
     directives: [ArtistInfoComponent,
                  AlbumsListComponent]
 })

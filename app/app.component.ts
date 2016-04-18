@@ -4,12 +4,12 @@ import 'rxjs/Rx';   // Load all features
 import { HTTP_PROVIDERS } from 'angular2/http';
 
 import { HomeComponent } from './home/home.component';
-import { AlbumsComponent } from './albums/albums.component';
-import { ArtistsComponent } from './artists/artists.component';
-import { AlbumsService } from './albums/albums.service';
-import { ArtistsService } from './artists/artists.service';
-import { AlbumDetailsComponent } from './albums/album.details.component';
-import { ArtistDetailsComponent } from './artists/artist.details.component';
+import { AlbumsComponent } from './albums/index/albums.component';
+import { ArtistsComponent } from './artists/index/artists.component';
+import { AlbumsService } from './albums/services/albums.service';
+import { ArtistsService } from './artists/services/artists.service';
+import { AlbumDetailsComponent } from './albums/details/album.details.component';
+import { ArtistDetailsComponent } from './artists/details/artist.details.component';
 
 @Component({
     selector: 'my-app',
