@@ -28,10 +28,9 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
             }],
         execute: function() {
             AlbumDetailsComponent = (function () {
-                function AlbumDetailsComponent(_albumsService, _artistsService, _router, _routeParams, _location) {
+                function AlbumDetailsComponent(_albumsService, _artistsService, _routeParams, _location) {
                     this._albumsService = _albumsService;
                     this._artistsService = _artistsService;
-                    this._router = _router;
                     this._routeParams = _routeParams;
                     this._location = _location;
                 }
@@ -43,7 +42,6 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
                 };
                 AlbumDetailsComponent.prototype.getAlbum = function (id) {
                     var _this = this;
-                    console.log('getAlbum');
                     var x = this._albumsService.getAlbum(id).subscribe(function (album) {
                         _this.album = album;
                         _this.getArtist(album.artist_id);
@@ -51,7 +49,6 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
                 };
                 AlbumDetailsComponent.prototype.getArtist = function (id) {
                     var _this = this;
-                    console.log('getArtist');
                     this._artistsService.getArtist(id).subscribe(function (artist) { return _this.artist = artist; }, function (error) { return _this.errorMessage = error; });
                 };
                 AlbumDetailsComponent.prototype.onBack = function () {
@@ -61,7 +58,7 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
                     core_1.Component({
                         templateUrl: 'app/albums/details/album.details.component.html'
                     }), 
-                    __metadata('design:paramtypes', [albums_service_1.AlbumsService, artists_service_1.ArtistsService, router_1.Router, router_1.RouteParams, router_1.Location])
+                    __metadata('design:paramtypes', [albums_service_1.AlbumsService, artists_service_1.ArtistsService, router_1.RouteParams, router_1.Location])
                 ], AlbumDetailsComponent);
                 return AlbumDetailsComponent;
             }());

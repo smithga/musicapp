@@ -1,5 +1,5 @@
 import { Component, OnInit } from 'angular2/core';
-import { Router, RouteParams, Location } from 'angular2/router';
+import { RouteParams, Location } from 'angular2/router';
 
 import { AlbumsService } from '../services/albums.service';
 import { ArtistsService } from '../../artists/services/artists.service';
@@ -16,7 +16,6 @@ export class AlbumDetailsComponent implements OnInit {
     
     constructor(private _albumsService: AlbumsService, 
                 private _artistsService: ArtistsService, 
-                private _router: Router, 
                 private _routeParams: RouteParams,
                 private _location: Location) {}
     
@@ -28,7 +27,6 @@ export class AlbumDetailsComponent implements OnInit {
     }
     
     getAlbum(id: number): void {
-        console.log('getAlbum');
         let x = this._albumsService.getAlbum(id).subscribe(
             album => {
               this.album = album;
@@ -38,7 +36,6 @@ export class AlbumDetailsComponent implements OnInit {
     }
 
     getArtist(id: number) : void {
-        console.log('getArtist');
         this._artistsService.getArtist(id).subscribe(
             artist => this.artist = artist,
             error => this.errorMessage = <any>error);        
