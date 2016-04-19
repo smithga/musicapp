@@ -4,14 +4,12 @@ import { Router, RouteParams } from 'angular2/router';
 import { IArtist } from '../models/artist';
 import { IAlbum } from '../../albums/models/album';
 import { ArtistsService } from '../services/artists.service';
-import { ArtistInfoComponent } from '../info/artist.info.component';
 import { AlbumsService } from '../../albums/services/albums.service';
 import { AlbumsListComponent } from '../../albums/list/albums.list.component';
 
 @Component({
     templateUrl: 'app/artists/details/artist.details.component.html',
-    directives: [ArtistInfoComponent,
-                 AlbumsListComponent]
+    directives: [AlbumsListComponent]
 })
 export class ArtistDetailsComponent implements OnInit {
     artist: IArtist;
