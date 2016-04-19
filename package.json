@@ -1,8 +1,8 @@
 {
-    "name": "my-app",
+    "name": "Music App",
     "version": "1.0.0",
-    "author": "[Author Name]",
-    "description": "[Description]",
+    "author": "Gary Smith",
+    "description": "Sample Angular 2 Music App",
     "scripts": {
         "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
         "tsc": "tsc",
