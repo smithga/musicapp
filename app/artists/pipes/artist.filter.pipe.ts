@@ -11,4 +11,5 @@ export class ArtistFilterPipe implements PipeTransform {
         return filter ? value.filter((artist:IArtist)=> 
             artist.name.toLocaleLowerCase().indexOf(filter) != -1) : value;
     }
+    
 }

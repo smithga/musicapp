@@ -21,7 +21,7 @@ import { ArtistDetailsComponent } from './artists/details/artist.details.compone
                 ArtistsService]
 })
 @RouteConfig([
-    {path: "/home", name: "Home", component: HomeComponent, useAsDefault: true },
+    { path: "/home", name: "Home", component: HomeComponent, useAsDefault: true },
     { path: "/albums", name: "Albums", component: AlbumsComponent },
     { path: "/artists", name: "Artists", component: ArtistsComponent },
     { path: "/albums/:id", name: "AlbumDetails", component: AlbumDetailsComponent },
