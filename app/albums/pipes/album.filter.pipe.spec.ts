@@ -1,7 +1,7 @@
 import {AlbumFilterPipe} from './album.filter.pipe';
 import {IAlbum, Album} from '../models/album';
 
-describe('artist.filter.pipe.spec', ()=> {
+describe('album.filter.pipe.spec', ()=> {
    
    beforeEach(() => {
        this.pipe = new AlbumFilterPipe();

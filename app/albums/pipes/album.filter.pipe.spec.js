@@ -12,7 +12,7 @@ System.register(['./album.filter.pipe', '../models/album'], function(exports_1, 
                 album_1 = album_1_1;
             }],
         execute: function() {
-            describe('artist.filter.pipe.spec', function () {
+            describe('album.filter.pipe.spec', function () {
                 beforeEach(function () {
                     _this.pipe = new album_filter_pipe_1.AlbumFilterPipe();
                     _this.albums = new Array();
