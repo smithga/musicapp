@@ -11,6 +11,7 @@ export class AlbumsService {
     constructor(private _http: Http) { }
     
     getAlbums(): Observable<IAlbum[]> {
+        console.log(`getAlbums(): ${this._albumsUrl}`);
         return this._http.get(this._albumsUrl)
             .map((response: Response) => <IAlbum[]> response.json())
             .do(data => console.log("All: " +  JSON.stringify(data)))
@@ -18,6 +19,7 @@ export class AlbumsService {
     }
 
     getAlbum(id: number): Observable<IAlbum> {
+        console.log('getAlbum()');
         return this.getAlbums()
             .map((albums: IAlbum[]) => albums.find(p => p.album_id === id));       
     }

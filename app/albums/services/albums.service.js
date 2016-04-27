@@ -30,12 +30,14 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
                     this._albumsUrl = 'api/albums.json';
                 }
                 AlbumsService.prototype.getAlbums = function () {
+                    console.log("getAlbums(): " + this._albumsUrl);
                     return this._http.get(this._albumsUrl)
                         .map(function (response) { return response.json(); })
                         .do(function (data) { return console.log("All: " + JSON.stringify(data)); })
                         .catch(this.handleError);
                 };
                 AlbumsService.prototype.getAlbum = function (id) {
+                    console.log('getAlbum()');
                     return this.getAlbums()
                         .map(function (albums) { return albums.find(function (p) { return p.album_id === id; }); });
                 };
