@@ -13,69 +13,69 @@ import {
 import {BaseRequestOptions, Response, ResponseOptions, Http, HTTP_PROVIDERS, XHRBackend} from 'angular2/http';
 import {MockBackend, MockConnection} from 'angular2/http/testing';
 
-import {IAlbum} from '../models/album';
-import {AlbumsService} from './albums.service';
+import {IArtist} from '../models/artist';
+import {ArtistsService} from './artists.service';
 
-describe('albums.service', () => {
+describe('artists.service', () => {
 
     beforeEachProviders(() => {
         return [
             HTTP_PROVIDERS,
             provide(XHRBackend, { useClass: MockBackend }),
-            AlbumsService
+            ArtistsService
         ];
     });
 
 
     beforeEach(() => {
-        this.albums = [
+        this.artists = [
             {
-                album_id: 1,
                 artist_id: 1,
-                image_url: "",
-                title: "Drone",
-                year: ""
+                name: "Muse",
+                image_url: "muse.jpg",
+                biography: "bio1"
             },
             {
-                album_id: 2,
-                artist_id: 1,
-                image_url: "muse-2nd_law.jpg",
-                title: "2nd Law",
-                year: "2015"
+                artist_id: 2,
+                name: "Breaking Benjamin",
+                image_url: "breaking_benjamin.jpg",
+                biography: "bio2"
             },
         ];
     });
 
-    it('retrieve all albums', inject([XHRBackend, AlbumsService], (mockBackend, albumsService: AlbumsService) => {
+    it('retrieve all artists', inject([XHRBackend, ArtistsService], (mockBackend, artistsService: ArtistsService) => {
         mockBackend.connections.subscribe(
             (connection: MockConnection) => {
                 connection.mockRespond(new Response(
                     new ResponseOptions({
-                        body: this.albums
+                        body: this.artists
                     }
                     )));
             });
 
-        albumsService.getAlbums().subscribe(
-            (albums: IAlbum[]) => {
-                expect(albums.length).toEqual(2);
+        artistsService.getArtists().subscribe(
+            (artists: IArtist[]) => {
+                expect(artists).toBeDefined();
+                expect(artists.length).toEqual(2);
             }
         );
     }));
 
-    it('retrieve one album', inject([XHRBackend, AlbumsService], (mockBackend, albumsService: AlbumsService) => {
+    it('retrieve one artist', inject([XHRBackend, ArtistsService], (mockBackend, artistsService: ArtistsService) => {
         mockBackend.connections.subscribe(
             (connection: MockConnection) => {
                 connection.mockRespond(new Response(
                     new ResponseOptions({
-                        body: this.albums
+                        body: this.artists
                     }
                     )));
             });
 
-        albumsService.getAlbum(2).subscribe(
-            (albums: IAlbum) => {
-                expect(albums.title).toBe("2nd Law");
+        artistsService.getArtist(2).subscribe(
+            (artist: IArtist) => {
+                expect(artist).toBeDefined();
+                expect(artist.name).toBe("Breaking Benjamin");
             }
         );
     }));

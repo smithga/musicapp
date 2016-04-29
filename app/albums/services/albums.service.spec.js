@@ -39,16 +39,15 @@ System.register(['angular2/core', 'angular2/testing', 'angular2/http', 'angular2
                             year: ""
                         },
                         {
-                            "album_id": 2,
-                            "artist_id": 1,
-                            "image_url": "muse-2nd_law.jpg",
-                            "title": "2nd Law",
-                            "year": "2015"
+                            album_id: 2,
+                            artist_id: 1,
+                            image_url: "muse-2nd_law.jpg",
+                            title: "2nd Law",
+                            year: "2015"
                         },
                     ];
                 });
                 testing_1.it('retrieve all albums', testing_1.inject([http_1.XHRBackend, albums_service_1.AlbumsService], function (mockBackend, albumsService) {
-                    //return new Promise((pass, fail) => {
                     mockBackend.connections.subscribe(function (connection) {
                         connection.mockRespond(new http_1.Response(new http_1.ResponseOptions({
                             body: _this.albums
@@ -57,13 +56,8 @@ System.register(['angular2/core', 'angular2/testing', 'angular2/http', 'angular2
                     albumsService.getAlbums().subscribe(function (albums) {
                         testing_1.expect(albums.length).toEqual(2);
                     });
-                    //expect(albumsService).not.toThrow();
-                    //var album: IAlbum = service.getAlbum(1);
-                    //expect(album.title).toEqual('Drones');
-                    //});
                 }));
                 testing_1.it('retrieve one album', testing_1.inject([http_1.XHRBackend, albums_service_1.AlbumsService], function (mockBackend, albumsService) {
-                    //return new Promise((pass, fail) => {
                     mockBackend.connections.subscribe(function (connection) {
                         connection.mockRespond(new http_1.Response(new http_1.ResponseOptions({
                             body: _this.albums
@@ -72,10 +66,6 @@ System.register(['angular2/core', 'angular2/testing', 'angular2/http', 'angular2
                     albumsService.getAlbum(2).subscribe(function (albums) {
                         testing_1.expect(albums.title).toBe("2nd Law");
                     });
-                    //expect(albumsService).not.toThrow();
-                    //var album: IAlbum = service.getAlbum(1);
-                    //expect(album.title).toEqual('Drones');
-                    //});
                 }));
             });
         }
