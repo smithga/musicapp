@@ -16,16 +16,16 @@ import { ArtistDetailsComponent } from './artists/details/artist.details.compone
     templateUrl: 'app/app.component.html',
     directives: [ROUTER_DIRECTIVES],
     providers: [ROUTER_PROVIDERS,
-                HTTP_PROVIDERS,
-                AlbumsService,
-                ArtistsService]
+        HTTP_PROVIDERS,
+        AlbumsService,
+        ArtistsService]
 })
 @RouteConfig([
-    {path: "/home", name: "Home", component: HomeComponent, useAsDefault: true },
-    { path: "/albums", name: "Albums", component: AlbumsComponent },
+    { path: "/home", name: "Home", component: HomeComponent, useAsDefault: true },
     { path: "/artists", name: "Artists", component: ArtistsComponent },
-    { path: "/albums/:id", name: "AlbumDetails", component: AlbumDetailsComponent },
-    { path: "/arists/:id", name: "ArtistDetails", component: ArtistDetailsComponent }
+    { path: "/arists/:id", name: "ArtistDetails", component: ArtistDetailsComponent },
+    { path: "/albums", name: "Albums", component: AlbumsComponent },
+    { path: "/albums/:id", name: "AlbumDetails", component: AlbumDetailsComponent }
 ])
 export class AppComponent {
     pageTitle(): string {

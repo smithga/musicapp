@@ -64,10 +64,10 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx', 'angular2/http',
                     }),
                     router_1.RouteConfig([
                         { path: "/home", name: "Home", component: home_component_1.HomeComponent, useAsDefault: true },
-                        { path: "/albums", name: "Albums", component: albums_component_1.AlbumsComponent },
                         { path: "/artists", name: "Artists", component: artists_component_1.ArtistsComponent },
-                        { path: "/albums/:id", name: "AlbumDetails", component: album_details_component_1.AlbumDetailsComponent },
-                        { path: "/arists/:id", name: "ArtistDetails", component: artist_details_component_1.ArtistDetailsComponent }
+                        { path: "/arists/:id", name: "ArtistDetails", component: artist_details_component_1.ArtistDetailsComponent },
+                        { path: "/albums", name: "Albums", component: albums_component_1.AlbumsComponent },
+                        { path: "/albums/:id", name: "AlbumDetails", component: album_details_component_1.AlbumDetailsComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

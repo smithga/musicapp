@@ -1,1 +1,1 @@
-{"version":3,"file":"artist.js","sourceRoot":"","sources":["artist.ts"],"names":[],"mappings":""}
+{"version":3,"file":"artist.js","sourceRoot":"","sources":["artist.ts"],"names":[],"mappings":";;;;;;;YAQA;gBACI,gBAAmB,SAAiB,EAAS,IAAY,EAAS,SAAiB,EAAS,SAAiB;oBAA1F,cAAS,GAAT,SAAS,CAAQ;oBAAS,SAAI,GAAJ,IAAI,CAAQ;oBAAS,cAAS,GAAT,SAAS,CAAQ;oBAAS,cAAS,GAAT,SAAS,CAAQ;gBAAG,CAAC;gBACrH,aAAC;YAAD,CAAC,AAFD,IAEC;YAFD,2BAEC,CAAA"}

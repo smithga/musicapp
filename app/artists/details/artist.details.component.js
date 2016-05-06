@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', '../services/artists.service', '../info/artist.info.component', '../../albums/services/albums.service', '../../albums/list/albums.list.component', '../../shared/panel.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', '../services/artists.service', '../../albums/services/albums.service', '../../albums/list/albums.list.component', '../info/artist.info.component', '../../shared/panel.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', '../services/artists.servic
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, artists_service_1, artist_info_component_1, albums_service_1, albums_list_component_1, panel_component_1;
+    var core_1, router_1, artists_service_1, albums_service_1, albums_list_component_1, artist_info_component_1, panel_component_1;
     var ArtistDetailsComponent;
     return {
         setters:[
@@ -23,14 +23,14 @@ System.register(['angular2/core', 'angular2/router', '../services/artists.servic
             function (artists_service_1_1) {
                 artists_service_1 = artists_service_1_1;
             },
-            function (artist_info_component_1_1) {
-                artist_info_component_1 = artist_info_component_1_1;
-            },
             function (albums_service_1_1) {
                 albums_service_1 = albums_service_1_1;
             },
             function (albums_list_component_1_1) {
                 albums_list_component_1 = albums_list_component_1_1;
+            },
+            function (artist_info_component_1_1) {
+                artist_info_component_1 = artist_info_component_1_1;
             },
             function (panel_component_1_1) {
                 panel_component_1 = panel_component_1_1;
