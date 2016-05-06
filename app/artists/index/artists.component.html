@@ -2,18 +2,7 @@
     Search: 
     <input type="text" [(ngModel)]="artistSearchFilter"/>
 </div>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        {{pageTitle}}
-    </div>
 
-    <div class="panel-body">
-        <artists-list [filter]='artistSearchFilter' (artistClicked)='onArtistClicked($event)'></artists-list>
-    </div>
-
-    <div class="panel-footer">
-        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
-            <i class='glyphicon glyphicon-chevron-left'></i> Back
-        </a>
-    </div>
-</div>
+<panel title="{{pageTitle}}" (backClicked)="onBack()">
+    <artists-list [filter]='artistSearchFilter' (artistClicked)='onArtistClicked($event)'></artists-list>
+</panel>

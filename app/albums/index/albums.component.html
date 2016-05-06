@@ -2,18 +2,8 @@
     Search: 
     <input type="text" [(ngModel)]="albumSearchFilter"/>
 </div>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        {{pageTitle}}
-    </div>
-
+<panel [title]="pageTitle" (backClicked)='onBack()'>
     <div class="panel-body">
         <albums-list [filter]='albumSearchFilter' (albumClicked)='onAlbumClicked($event)'></albums-list>
     </div>
-
-    <div class="panel-footer">
-        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
-            <i class='glyphicon glyphicon-chevron-left'></i> Back
-        </a>
-    </div>
-</div>
+</panel>

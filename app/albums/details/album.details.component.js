@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', '../services/albums.service', '../../artists/services/artists.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', '../services/albums.service', '../../artists/services/artists.service', '../../shared/panel.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, albums_service_1, artists_service_1;
+    var core_1, router_1, albums_service_1, artists_service_1, panel_component_1;
     var AlbumDetailsComponent;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
             },
             function (artists_service_1_1) {
                 artists_service_1 = artists_service_1_1;
+            },
+            function (panel_component_1_1) {
+                panel_component_1 = panel_component_1_1;
             }],
         execute: function() {
             AlbumDetailsComponent = (function () {
@@ -56,7 +59,8 @@ System.register(['angular2/core', 'angular2/router', '../services/albums.service
                 };
                 AlbumDetailsComponent = __decorate([
                     core_1.Component({
-                        templateUrl: 'app/albums/details/album.details.component.html'
+                        templateUrl: 'app/albums/details/album.details.component.html',
+                        directives: [panel_component_1.PanelComponent]
                     }), 
                     __metadata('design:paramtypes', [albums_service_1.AlbumsService, artists_service_1.ArtistsService, router_1.RouteParams, router_1.Location])
                 ], AlbumDetailsComponent);

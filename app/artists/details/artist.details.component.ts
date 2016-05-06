@@ -7,11 +7,13 @@ import { ArtistsService } from '../services/artists.service';
 import { ArtistInfoComponent } from '../info/artist.info.component';
 import { AlbumsService } from '../../albums/services/albums.service';
 import { AlbumsListComponent } from '../../albums/list/albums.list.component';
+import {PanelComponent} from '../../shared/panel.component';
 
 @Component({
     templateUrl: 'app/artists/details/artist.details.component.html',
     directives: [ArtistInfoComponent,
-                 AlbumsListComponent]
+                 AlbumsListComponent,
+                 PanelComponent]
 })
 export class ArtistDetailsComponent implements OnInit {
     artist: IArtist;

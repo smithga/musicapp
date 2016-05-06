@@ -1,34 +1,15 @@
-<div class="panel panel-default" *ngIf='artist'>
-    
-    <div class="panel-heading">
-        Artist Details
-    </div>
-    
-    <div class="panel-body">
-        <div class="media">
-            <div class="media-left media-top">
-                <img [src]='"images/artists/" + artist.image_url' />
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">{{artist.name}}</h4>
-                {{artist.biography}}
-            </div>
+<panel title="Artist Details" (backClicked)="onBack()" *ngIf='artist'>
+    <div class="media">
+        <div class="media-left media-top">
+            <img [src]='"images/artists/" + artist.image_url' />
         </div>
-        <br/>
-        <div class='panel panel-default'>
-            <div class='panel-heading'>
-                Albums
-            </div>
-            <div class='panel-body'>
-                <albums-list (albumClicked)='onAlbumClicked($event)' [artist]='artist'></albums-list>
-            </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{artist.name}}</h4>
+            {{artist.biography}}
         </div>
     </div>
-    
-    <div class="panel-footer">
-        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
-            <i class='glyphicon glyphicon-chevron-left'></i> Back
-        </a>
-    </div>
-    
-</div>
+    <br/>
+    <panel title="Albums" [showFooter]="false">
+        <albums-list (albumClicked)='onAlbumClicked($event)' [artist]='artist'></albums-list>
+    </panel>    
+</panel>

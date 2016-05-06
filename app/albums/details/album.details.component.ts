@@ -5,9 +5,11 @@ import { AlbumsService } from '../services/albums.service';
 import { ArtistsService } from '../../artists/services/artists.service';
 import { IAlbum } from '../models/album';
 import { IArtist } from '../../artists/models/artist';
+import {PanelComponent} from '../../shared/panel.component';
 
 @Component({
-    templateUrl: 'app/albums/details/album.details.component.html'
+    templateUrl: 'app/albums/details/album.details.component.html',
+    directives: [PanelComponent]
 })
 export class AlbumDetailsComponent implements OnInit {
     errorMessage: string;

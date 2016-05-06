@@ -3,10 +3,12 @@ import { Router } from 'angular2/router';
 
 import { IAlbum } from '../models/album';
 import { AlbumsListComponent } from '../list/albums.list.component';
+import {PanelComponent} from '../../shared/panel.component';
 
 @Component({
     templateUrl: 'app/albums/index/albums.component.html',
-    directives: [AlbumsListComponent]
+    directives: [AlbumsListComponent,
+                 PanelComponent]
 })
 export class AlbumsComponent {
     public pageTitle: string = "Albums";

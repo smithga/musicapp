@@ -3,10 +3,11 @@ import { Router } from 'angular2/router';
 
 import { IArtist } from '../models/artist';
 import {ArtistsListComponent} from '../list/artists.list.component';
+import {PanelComponent} from '../../shared/panel.component';
 
 @Component({
     templateUrl: 'app/artists/index/artists.component.html',
-    directives: [ArtistsListComponent],
+    directives: [ArtistsListComponent, PanelComponent],
 })
 export class ArtistsComponent {
     public pageTitle: string = "Artists";
